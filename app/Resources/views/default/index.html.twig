@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    Inspect source code to see the script created via assetic with the problem.
+{% endblock %}
+
+{% block javascripts %}
+    {% javascripts 'js/*' filter='my_wrapper' %}
+    <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+{% endblock %}
